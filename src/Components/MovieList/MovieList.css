@@ -1,0 +1,29 @@
+.MovieList {
+    margin: 0;
+    display: flex;
+    flex-flow: wrap;
+    width: 938px;
+    justify-content: space-between;
+}
+
+.movie {
+    width: 451px;
+    margin-bottom: 32px;
+}
+
+.notFind {
+    margin: 0 auto;
+    font-size: 2rem;
+}
+
+@media (max-width: 551px) {
+    .MovieList {
+        width: 387px;
+        flex-flow: column;
+    }
+
+    .movie {
+        width: 387px;
+        margin-bottom: 32px;
+    }
+}

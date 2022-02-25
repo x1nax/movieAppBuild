@@ -1,0 +1,47 @@
+@import '~antd/dist/antd.css';
+
+body {
+    background: #f7f7f7;
+    font-family: 'Inter';
+}
+
+.wrap {
+    width: 1010px;
+    background: white;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    min-width: 320px;
+}
+
+.nav {
+    margin: 20px 0;
+}
+
+.ant-input {
+    font-family: Inter;
+    border-radius: 4px;
+    margin-bottom: 34px;
+    width: 938px;
+}
+
+.ant-menu-horizontal {
+    border: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.error {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 551px) {
+    .wrap {
+        width: 420px;
+    }
+
+    .ant-input {
+        width: 388px;
+    }
+}

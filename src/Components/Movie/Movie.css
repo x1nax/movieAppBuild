@@ -1,0 +1,162 @@
+.Card {
+    display: flex;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    width: 454px;
+    height: 281px;
+}
+
+.Card img {
+    width: 183px;
+    height: 281px;
+}
+
+.ant-card-body {
+    display: grid;
+
+    grid-template-columns: 83% 17%;
+    grid-template-rows: 15% 10% minmax(auto, 45px) auto auto 0;
+}
+
+.ant-card-body::before {
+    display: none;
+}
+
+.Movie-title {
+    font-weight: 500;
+    margin-bottom: 0;
+    font-size: 20px;
+    height: 28px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 210px;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    align-self: center;
+}
+
+.movie__date {
+    font-size: 12px;
+    font-weight: 300;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    align-self: center;
+}
+
+.genres {
+    display: flex;
+    flex-flow: wrap;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    align-items: center;
+}
+
+.genre {
+    font-size: 12px;
+    font-weight: normal;
+    background: #fafafa;
+    border: 1px solid #d9d9d9;
+    border-radius: 2px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 1px 4px;
+    height: 20px;
+}
+
+.overview {
+    font-size: 12px;
+    line-height: 22px;
+    overflow: hidden;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    align-self: center;
+    margin-bottom: 0;
+}
+
+.ant-rate {
+    font-size: 18px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    align-self: end;
+}
+
+.voteAverage {
+    border-radius: 50%;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    font-size: 12px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: end;
+    margin-top: 10px;
+}
+
+@media (max-width: 551px) {
+    .Card {
+        width: 385px;
+        height: 245px;
+    }
+
+    .Card img {
+        width: 60px;
+        height: 91px;
+    }
+
+    .ant-card {
+        position: relative;
+    }
+
+    .ant-card-bordered .ant-card-cover {
+        position: absolute;
+        left: 10px;
+        top: 6px;
+    }
+
+    .ant-card-body {
+        padding: 0;
+        display: grid;
+        grid-template-columns: 18% 71% 11%;
+        grid-template-rows: 12% 12% 14% 40% 22% 0;
+    }
+
+    .voteAverage {
+        height: 30px;
+        width: 30px;
+        grid-column-start: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        justify-self: center;
+        align-self: auto;
+    }
+
+    .Movie-title {
+        grid-column-start: 2;
+        align-self: auto;
+    }
+
+    .movie__date {
+        grid-column-start: 2;
+    }
+
+    .genres {
+        grid-column-start: 2;
+        align-self: end;
+    }
+
+    .overview {
+        grid-column-end: 3;
+    }
+
+    .ant-rate {
+        justify-self: center;
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+}

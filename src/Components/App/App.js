@@ -3,7 +3,7 @@ import { Input, Spin, Menu, Alert } from 'antd'
 import { debounce } from 'lodash'
 import MovieList from '../MovieList/MovieList'
 import './App.css'
-import GetData from '../GetData/GetData'
+import GetData from '../../api'
 
 export const GenresContext = React.createContext([])
 
@@ -55,9 +55,11 @@ export default class App extends Component {
     }, 500)
 
     componentDidMount() {
+        let { currentPage } = this.state
         this.getData
             .getGenre()
             .then((data) => this.setState({ genres: data.genres }))
+            .then(() => this.updateMovie('return', currentPage))
         this.setState({ loading: false })
     }
 

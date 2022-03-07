@@ -16,6 +16,10 @@
     font-size: 2rem;
 }
 
+.notRated {
+    margin: 0 auto;
+}
+
 @media (max-width: 551px) {
     .MovieList {
         width: 387px;

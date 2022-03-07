@@ -12,7 +12,7 @@
 
 .ant-card-body {
     display: grid;
-    width: 100%;
+
     grid-template-columns: 83% 17%;
     grid-template-rows: 15% 10% minmax(auto, 45px) auto auto 0;
 }
@@ -123,7 +123,7 @@
         padding: 0;
         display: grid;
         grid-template-columns: 18% 71% 11%;
-        grid-template-rows: 12% 12% auto 40% 22% 0;
+        grid-template-rows: 12% 12% 14% 40% 22% 0;
     }
 
     .voteAverage {

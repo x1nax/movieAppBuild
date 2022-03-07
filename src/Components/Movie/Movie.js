@@ -1,6 +1,7 @@
 import { Card, Rate } from 'antd'
 import './Movie.css'
 import holder from './noImg.png'
+import { getRealeaseDate, shortOverview } from '../../helpers'
 
 import { GenresContext } from '../App/App'
 
@@ -24,33 +25,6 @@ export default function Movie({ movie }) {
             ? { padding: '0 0 0 21px' }
             : { padding: '0 0 0 10px' }
 
-    const getRealeaseDate = (relDate) => {
-        if (relDate) {
-            const dateData = relDate.split('-')
-            const months = [
-                'January',
-                'February',
-                'March',
-                'April',
-                'May',
-                'June',
-                'July',
-                'August',
-                'September',
-                'October',
-                'November',
-                'December ',
-            ]
-            let [year, month, day] = dateData
-            if (month[0] === '0') month = month.slice(1)
-            month -= 1
-            if (day[0] === '0') day = day.slice(1)
-            const newFormatDate = `${months[month]} ${day}, ${year}`
-            return newFormatDate
-        }
-        return ''
-    }
-
     const Genres = (genres) => {
         let movieGenres = genres.filter(
             (genre) => genresId.indexOf(genre.id) > -1
@@ -60,15 +34,6 @@ export default function Movie({ movie }) {
                 {genre.name}
             </span>
         ))
-    }
-
-    const shortOverview = (text) => {
-        let newStr = text.split(' ').slice(0, 25)
-        if (newStr.length < text.split(' ').length) {
-            newStr.push('...')
-            return newStr.join(' ')
-        }
-        return text
     }
 
     const average = (num) => {

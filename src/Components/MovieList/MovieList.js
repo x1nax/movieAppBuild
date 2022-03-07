@@ -12,14 +12,18 @@ export default function MovieList({
     onPageChange,
     ratedMode,
 }) {
-    const elements = movies.map((movie) => (
-        <li className="movie" key={movie.id}>
-            <Movie movie={movie} />
-        </li>
-    ))
+    const elements = movies ? (
+        movies.map((movie) => (
+            <li className="movie" key={movie.id}>
+                <Movie movie={movie} />
+            </li>
+        ))
+    ) : (
+        <span className="notRated">Movies not Rated</span>
+    )
 
     const pagination =
-        movies.length > 0 && !notFound && !ratedMode ? (
+        movies > 0 && !notFound && !ratedMode ? (
             <Pagination
                 current={currentPage}
                 total={totalPages * 10}

@@ -23,7 +23,7 @@ export default function MovieList({
     )
 
     const pagination =
-        movies > 0 && !notFound && !ratedMode ? (
+        movies && !notFound && !ratedMode ? (
             <Pagination
                 current={currentPage}
                 total={totalPages * 10}

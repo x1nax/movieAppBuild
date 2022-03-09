@@ -22,8 +22,10 @@ export default function MovieList({
         <span className="notRated">Movies not Rated</span>
     )
 
+    const films = movies && movies.length > 0
+
     const pagination =
-        movies && !notFound && !ratedMode ? (
+        films && !notFound && !ratedMode ? (
             <Pagination
                 current={currentPage}
                 total={totalPages * 10}
@@ -47,7 +49,7 @@ export default function MovieList({
 }
 
 MovieList.defaultProps = {
-    movies: [],
+    5: [],
 }
 
 MovieList.prototype = {
